@@ -17,8 +17,8 @@ Both tasks are designed for evaluation using the [Inspect AI](https://inspect.ai
 
 ```bash
 # Clone the repository
-git clone <repository-url>
-cd visual-perspective-taking
+git clone https://github.com/Kinds-of-Intelligence-CFI/visuospatial-perspective-taking.git
+cd visuospatial-perspective-taking
 
 # Create virtual environment and install dependencies
 python -m venv venv
@@ -73,14 +73,16 @@ This task presents visual stimuli where symbols can appear differently depending
 ## Project Structure
 
 ```
-visual-perspective-taking/
+visuospatial-perspective-taking/
 ├── director_task/          # Grid-based perspective-taking task
+│   └── results/            # Raw eval logs and R analysis for the paper
 ├── rotating_figure_task/   # Ambiguous symbol perspective task
-├── datasets/               # Generated datasets with images
-├── logs/                   # Evaluation results and logs
+│   └── results/            # Raw eval logs and R analysis for the paper
 ├── resources/              # Shared assets (images, figures)
-├── setup.py               # Package configuration
-└── CLAUDE.md              # Development guidelines for AI assistants
+├── datasets/               # Generated datasets with images (created at runtime)
+├── logs/                   # Evaluation results and logs (created at runtime)
+├── cogsci_appendix.pdf     # Supplementary appendix for the paper
+└── setup.py                # Package configuration
 ```
 
 ## Dependencies
@@ -90,6 +92,9 @@ visual-perspective-taking/
 - **pydantic**: Data validation and serialization
 - **jsonschema**: JSON validation for datasets
 - **pandas/seaborn**: Data analysis and visualization (rotating_figure_task)
+
+The statistical analyses additionally require R with the following packages:
+`tidyverse`, `lme4`, `glmmTMB`, `car`, `emmeans`, `kableExtra`, `gridExtra`.
 
 ## Evaluation
 
