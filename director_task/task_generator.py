@@ -79,7 +79,6 @@ def main():
 
     if args.variable_fill_ratio:
         print("Warning: Variable fill ratio generation is enabled. This will change the number of filler items in the grid.")
-        # This function is not implemented in the provided code, but you can implement it as needed.
         samples = generate_variable_fill_ratio(args.dataset_size, args.grid_width, args.grid_height, items=items)
         print(f"Saving dataset '{args.dataset_name}'...")
         save_dataset(

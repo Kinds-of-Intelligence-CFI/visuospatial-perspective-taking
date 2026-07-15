@@ -1,8 +1,8 @@
 """
 Stimulus Generation Module
 
-Extracted and modularized stimulus generation logic from generate_stimuli.py
-for use in the unified dataset generation pipeline.
+Image composition logic for the rotating figure task: places a figure and an
+ambiguous symbol on a background according to field-of-view constraints.
 """
 
 import os
@@ -121,10 +121,7 @@ def generate_stimulus_images(
     symbol_dict: Dict[str, Dict],
 ) -> List[StimulusMetadataModel]:
     """
-    Generate stimulus images and return metadata.
-    
-    This function replicates the core logic from generate_stimuli.py but returns
-    structured metadata instead of writing CSV files.
+    Generate stimulus images and return structured metadata for each image.
     """
     # Load assets
     background = load_image(resource_path, background_image)
@@ -217,7 +214,7 @@ def generate_stimulus_images(
                 figure_center, figure_angle, fov_angle, view_distance,
                 opposite_location
             )
-            flipped_number = alternative_number.rotate(number_angle + 180 % 360, expand=True)
+            flipped_number = alternative_number.rotate((number_angle + 180) % 360, expand=True)
             composed.paste(flipped_number, alternate_num_position, flipped_number)
             alternative_number = alternate_symbol_config["rotations"][appears_unrotated]
         

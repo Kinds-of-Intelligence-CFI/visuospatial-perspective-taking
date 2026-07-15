@@ -29,7 +29,7 @@ class StimulusMetadataModel(BaseModel):
 
 
 class PromptSetModel(BaseModel):
-    """Configuration for a stimulus set from prompts.csv."""
+    """Configuration for a stimulus set from prompts_clean.csv."""
     stimulus_set: str
     visual_prompt: str
     spatial_prompt: str
@@ -103,7 +103,7 @@ def validate_dataset_file(dataset_path: str) -> Tuple[bool, List[str]]:
 
 
 def load_prompts(prompts_path: str) -> Dict[str, PromptSetModel]:
-    """Load prompt configurations from prompts.csv."""
+    """Load prompt configurations from prompts_clean.csv."""
     prompts = {}
     
     try:
@@ -142,10 +142,8 @@ def save_dataset(
     control_proportion: float = 1/3,
 ):
     """
-    Generate and save a complete six-or-nine dataset with images and JSON metadata.
-    
-    This function combines stimulus generation (like generate_stimuli.py) with
-    prompt integration (like create_experiment_file.py) into a single workflow.
+    Generate and save a complete rotating figure dataset with images and JSON
+    metadata, combining stimulus generation and prompt integration.
     """
     # Set random seed for reproducibility
     random.seed(seed)
@@ -169,7 +167,7 @@ def save_dataset(
     requested_sets = set(stimulus_sets)
     missing_sets = requested_sets - available_sets
     if missing_sets:
-        raise ValueError(f"Requested stimulus sets not found in prompts.csv: {missing_sets}")
+        raise ValueError(f"Requested stimulus sets not found in prompts_clean.csv: {missing_sets}")
     
     # Generate stimuli per stimulus set with appropriate placement zones
     print("Generating stimulus images...")

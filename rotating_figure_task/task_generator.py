@@ -20,8 +20,8 @@ SYMBOL_CONFIGS = {
     "u_n": {
         "image_file": "im_of_u.jpg",           # Base image file to load from resources
         "rotations": {
-            True: "u",    # appears_as_original = True: shows as "n"
-            False: "n"    # appears_as_original = False: rotated 180° shows as "u"
+            True: "u",    # appears_as_original = True: shows as "u"
+            False: "n"    # appears_as_original = False: rotated 180° shows as "n"
         }
     },
     "p_d": {

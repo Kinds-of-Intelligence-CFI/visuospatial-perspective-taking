@@ -122,6 +122,15 @@ inspect eval --help
 ```
 Additionally, you can run the evaluation from visual studio code by using the inspect extension. You can find more information on how to do this in the [Inspect AI documentation](https://inspect.aisi.org.uk/vscode.html).
 
+## Evaluation sweep
+`run_director_eval_sweep.py` automates running the evaluation across several datasets that vary the related item and fill proportions, in both image and ASCII modes, plus the control task. It was used to run the paper's evaluations.
+
+```bash
+python -m director_task.run_director_eval_sweep --model <model_name>
+```
+
+Note that it discovers datasets in the `datasets/` directory by name and only matches datasets named `director_task_large_related_prop_<X>_fill_prop_<Y>` (for example `director_task_large_related_prop_0.7_fill_prop_0.9`), so datasets generated with other names (including the commands above) will not be picked up. Run `python -m director_task.run_director_eval_sweep --help` for the full options, including `--dry-run` to preview what would be evaluated.
+
 
 # How samples are generated
 This section describes how each sample in the dataset is generated. it doesn't cover the specific details but should give a good idea of the flow.
