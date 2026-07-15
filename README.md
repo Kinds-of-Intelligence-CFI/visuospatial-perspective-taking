@@ -34,7 +34,7 @@ pip install -e .
 python -m director_task.task_generator --dataset_name my_dataset --dataset_size 100
 
 # Run evaluation
-inspect eval director_task/task.py@directors_task --model <model_name>
+inspect eval director_task/task.py@directors_task --model <model_name> -T dataset_path=datasets/my_dataset/my_dataset.json
 ```
 
 #### Rotating Figure Task
@@ -43,7 +43,7 @@ inspect eval director_task/task.py@directors_task --model <model_name>
 python -m rotating_figure_task.task_generator --dataset_name my_dataset --dataset_size 100 --use_number --use_arrow
 
 # Run evaluation
-inspect eval rotating_figure_task/task.py@rotating_figure_task --model <model_name>
+inspect eval rotating_figure_task/task.py@rotating_figure_task --model <model_name> -T dataset_path=datasets/my_dataset/my_dataset.json
 ```
 
 ## Task Details

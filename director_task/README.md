@@ -114,7 +114,7 @@ python -m director_task.item_editor
 ## Running the evaluation
 To run the evaluation we used the Inspect AI framework. It allows us to run the evaluation several different way with different parameters. The simplest way is as follows:
 ```bash
-inspect eval director_task/task.py@directors_task --model <model_name> -T dataset=<path_to_json>
+inspect eval director_task/task.py@directors_task --model <model_name> -T dataset_path=<path_to_json>
 ```
 You can see other options by running:
 ```bash

@@ -44,13 +44,12 @@ python -m rotating_figure_task.task_generator \
     --trial_num 1000 \
     --control_proportion 1 \
     --use_number \
-    --use_arrow \
     --image_size 400 400 \
     --figure_scale 1.5 \
     --margin 200 \
     --fov_angle 60 \
     --view_distance 5000 \
-    --placement_locations left,right,front,behind \
+    --placement_locations left,right,front,behind,front_left,front_right \
     --rotation_min 0 \
     --rotation_max 360 \
     --jitter_range 20 \
@@ -66,13 +65,12 @@ python -m rotating_figure_task.task_generator \
     --trial_num 1000 \
     --control_proportion 0.33 \
     --use_number \
-    --use_arrow \
     --image_size 400 400 \
     --figure_scale 1.5 \
     --margin 200 \
     --fov_angle 60 \
     --view_distance 5000 \
-    --placement_locations left,right,front,behind \
+    --placement_locations left,right,front,behind,front_left,front_right \
     --rotation_min 0 \
     --rotation_max 360 \
     --jitter_range 20 \
@@ -131,7 +129,8 @@ python rotating_figure_task/analyse_results.py
 python rotating_figure_task/analyse_follow_up.py
 
 # 4. Mixed-effects logistic regression models and LaTeX tables (paper Table 1)
-Rscript rotating_figure_task/results/vpt_task.R
+#    (run from inside the results directory - the script uses relative paths)
+cd rotating_figure_task/results && Rscript vpt_task.R
 ```
 
 `results/` tracks only the raw input data (`combined_vpt_task_logs.csv`,
