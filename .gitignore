@@ -33,3 +33,5 @@ human_baseline.py
 /rotating_figure_task/human_task
 /.claude
 CLAUDE.md
+/director_task/images
+/rotating_figure_task/stimuli_parameters.xlsx

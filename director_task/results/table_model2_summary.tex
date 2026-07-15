@@ -1,0 +1,53 @@
+\begin{table}[!h]
+\centering
+\caption{\label{tab:model2_summary}Model 2: Relative Adjective × Visual Perspective × Model}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{lllll}
+\toprule
+Term & Est./($\chi^2$) & SE/(df) & z & p\\
+\midrule
+\textbf{A. Model Coefficients} &  &  &  & \\
+Intercept & 1.618 & 0.249 & 6.501 & $<$ 0.001***\\
+Model: GPT-4o & -1.380 & 0.103 & -13.341 & $<$ 0.001***\\
+Model: o4-mini & 1.106 & 0.121 & 9.103 & $<$ 0.001***\\
+Model: o3 & 2.055 & 0.158 & 13.034 & $<$ 0.001***\\
+Rel. Adj: Size & -0.119 & 0.327 & -0.365 & 0.715\\
+Rel. Adj: Spatial & -0.510 & 0.326 & -1.567 & 0.117\\
+Visual PT: Different & -2.900 & 0.331 & -8.757 & $<$ 0.001***\\
+Format: Image & -1.153 & 0.182 & -6.342 & $<$ 0.001***\\
+Model: GPT-4o $\times$ Rel. Adj: Size & 1.765 & 0.149 & 11.821 & $<$ 0.001***\\
+Model: o4-mini $\times$ Rel. Adj: Size & 1.297 & 0.199 & 6.507 & $<$ 0.001***\\
+Model: o3 $\times$ Rel. Adj: Size & 1.621 & 0.302 & 5.372 & $<$ 0.001***\\
+Model: GPT-4o $\times$ Rel. Adj: Spatial & 1.351 & 0.142 & 9.508 & $<$ 0.001***\\
+Model: o4-mini $\times$ Rel. Adj: Spatial & 1.097 & 0.184 & 5.964 & $<$ 0.001***\\
+Model: o3 $\times$ Rel. Adj: Spatial & 0.791 & 0.233 & 3.391 & $<$ 0.001***\\
+Model: GPT-4o $\times$ Visual PT: Different & 1.621 & 0.162 & 9.989 & $<$ 0.001***\\
+Model: o4-mini $\times$ Visual PT: Different & 1.157 & 0.165 & 7.015 & $<$ 0.001***\\
+Model: o3 $\times$ Visual PT: Different & 0.760 & 0.195 & 3.892 & $<$ 0.001***\\
+Rel. Adj: Size $\times$ Visual PT: Different & 1.043 & 0.465 & 2.244 & 0.025*\\
+Rel. Adj: Spatial $\times$ Visual PT: Different & 0.970 & 0.465 & 2.087 & 0.037*\\
+Model: GPT-4o $\times$ Rel. Adj: Size $\times$ Visual PT: Different & -2.016 & 0.219 & -9.189 & $<$ 0.001***\\
+Model: o4-mini $\times$ Rel. Adj: Size $\times$ Visual PT: Different & -2.588 & 0.247 & -10.475 & $<$ 0.001***\\
+Model: o3 $\times$ Rel. Adj: Size $\times$ Visual PT: Different & -3.363 & 0.336 & -9.994 & $<$ 0.001***\\
+Model: GPT-4o $\times$ Rel. Adj: Spatial $\times$ Visual PT: Different & -1.923 & 0.223 & -8.622 & $<$ 0.001***\\
+Model: o4-mini $\times$ Rel. Adj: Spatial $\times$ Visual PT: Different & -2.415 & 0.237 & -10.179 & $<$ 0.001***\\
+Model: o3 $\times$ Rel. Adj: Spatial $\times$ Visual PT: Different & -2.169 & 0.278 & -7.790 & $<$ 0.001***\\
+ &  &  &  & \\
+\textbf{B. Type III Wald Tests} &  &  &  & \\
+Intercept & 42.268 & 1 &  & $<$ 0.001***\\
+Model & 701.100 & 3 &  & $<$ 0.001***\\
+Rel. Adj & 2.693 & 2 &  & 0.260\\
+Visual PT & 76.687 & 1 &  & $<$ 0.001***\\
+Format & 40.226 & 1 &  & $<$ 0.001***\\
+Model $\times$ Rel. Adj & 170.216 & 6 &  & $<$ 0.001***\\
+Model $\times$ Visual PT & 105.717 & 3 &  & $<$ 0.001***\\
+Rel. Adj $\times$ Visual PT & 6.247 & 2 &  & 0.044*\\
+Model $\times$ Rel. Adj $\times$ Visual PT & 207.900 & 6 &  & $<$ 0.001***\\
+\bottomrule
+\multicolumn{5}{l}{\textsuperscript{} Panel A: Coefficient estimates with Wald z-tests for individual parameters}\\
+\multicolumn{5}{l}{\textsuperscript{} Panel B: Type III Wald $\chi^2$ tests for omnibus effects of factors}\\
+\multicolumn{5}{l}{\textsuperscript{} Significance codes: *** p $<$ 0.001, ** p $<$ 0.01, * p $<$ 0.05, . p $<$ 0.1}\\
+\multicolumn{5}{l}{\textsuperscript{} Random effect variance (trial ID): 0.095}\\
+\end{tabular}}
+\end{table}

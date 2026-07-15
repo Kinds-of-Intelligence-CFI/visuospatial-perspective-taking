@@ -1,0 +1,31 @@
+\begin{table}[!h]
+\centering
+\caption{\label{tab:model4_emm_summary}Model 4: Estimated Marginal Means for Visual and Spatial Perspective by Model}
+\centering
+\begin{threeparttable}
+\begin{tabular}[t]{lllllll}
+\toprule
+Type & Model & Shared & Different & OR & SE & p\\
+\midrule
+ & GPT-4o-mini & 0.10 & 0.08 & 1.37 & 0.36 & 0.242\\
+
+ & GPT-4o & 0.45 & 0.13 & 5.30 & 1.03 & $<$.001\\
+
+ & o4-mini & 0.66 & 0.17 & 9.46 & 1.91 & $<$.001\\
+
+\multirow[t]{-4}{*}{\raggedright\arraybackslash Visual} & o3 & 0.97 & 0.37 & 52.87 & 11.39 & $<$.001\\
+
+ & GPT-4o-mini & 0.39 & 0.01 & 43.62 & 11.60 & $<$.001\\
+
+ & GPT-4o & 0.35 & 0.19 & 2.27 & 0.44 & $<$.001\\
+
+ & o4-mini & 0.76 & 0.11 & 25.04 & 5.05 & $<$.001\\
+
+\multirow[t]{-4}{*}{\raggedright\arraybackslash Spatial} & o3 & 0.85 & 0.77 & 1.69 & 0.36 & 0.015\\
+\bottomrule
+\end{tabular}
+\begin{tablenotes}
+\item OR and SE from pairwise contrast (Shared vs Different).
+\end{tablenotes}
+\end{threeparttable}
+\end{table}

@@ -1,0 +1,53 @@
+\begin{table}[!h]
+\centering
+\caption{\label{tab:vpt_combined_emm}Estimated Marginal Means by Angular Disparity Across Test Conditions}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{llllllll}
+\toprule
+Test & Model & 0–45 & 45–90 & 90–135 & 135–180 & $\chi^2$ & p\\
+\midrule
+ & GPT-4o-mini & 0.40 & 0.60 & 0.68 & 0.74 & 203.6 & $<$.001\\
+
+ & GPT-4o & 0.70 & 0.67 & 0.74 & 0.78 & 23.6 & $<$.001\\
+
+ & o4-mini & 0.99 & 0.81 & 0.83 & 0.98 & 145.9 & $<$.001\\
+
+\multirow[t]{-4}{*}{\raggedright\arraybackslash 1 (visual)} & o3 & 0.77 & 0.79 & 0.77 & 0.75 & 3.5 & 0.317\\
+
+ & GPT-4o-mini & 0.57 & 0.55 & 0.52 & 0.52 & 5.1 & 0.162\\
+
+ & GPT-4o & 0.79 & 0.72 & 0.70 & 0.75 & 18.3 & $<$.001\\
+
+ & o4-mini & 0.99 & 0.82 & 0.84 & 0.97 & 129.7 & $<$.001\\
+
+\multirow[t]{-4}{*}{\raggedright\arraybackslash 1 (spatial)} & o3 & 0.74 & 0.76 & 0.75 & 0.74 & 0.8 & 0.846\\
+
+ & GPT-4o-mini & 0.82 & 0.51 & 0.21 & 0.07 & 787.2 & $<$.001\\
+
+ & GPT-4o & 0.31 & 0.28 & 0.34 & 0.54 & 131.2 & $<$.001\\
+
+ & o4-mini & 0.45 & 0.28 & 0.32 & 0.57 & 160.4 & $<$.001\\
+
+\multirow[t]{-4}{*}{\raggedright\arraybackslash 2 (visual)} & o3 & 0.60 & 0.37 & 0.33 & 0.72 & 304.3 & $<$.001\\
+
+ & GPT-4o-mini & 0.72 & 0.53 & 0.43 & 0.25 & 322.2 & $<$.001\\
+
+ & GPT-4o & 0.78 & 0.59 & 0.44 & 0.19 & 493.6 & $<$.001\\
+
+ & o4-mini & 0.86 & 0.66 & 0.63 & 0.80 & 134.7 & $<$.001\\
+
+\multirow[t]{-4}{*}{\raggedright\arraybackslash 2 (spatial)} & o3 & 0.61 & 0.56 & 0.50 & 0.66 & 42.4 & $<$.001\\
+
+ & GPT-4o-mini & 0.75 & 0.36 & 0.12 & 0.02 & 680.5 & $<$.001\\
+
+ & GPT-4o & 0.75 & 0.42 & 0.17 & 0.02 & 634.7 & $<$.001\\
+
+ & o4-mini & 0.80 & 0.47 & 0.25 & 0.28 & 493.3 & $<$.001\\
+
+\multirow[t]{-4}{*}{\raggedright\arraybackslash 3 (visuospatial)} & o3 & 0.77 & 0.52 & 0.27 & 0.31 & 420.3 & $<$.001\\
+\bottomrule
+\multicolumn{8}{l}{\textsuperscript{} Values are estimated marginal probabilities of correct responses.}\\
+\multicolumn{8}{l}{\textsuperscript{} $\chi^2$(3) tests simple main effect of angular disparity within each model and question type.}\\
+\end{tabular}}
+\end{table}

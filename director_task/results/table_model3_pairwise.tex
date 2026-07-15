@@ -1,0 +1,32 @@
+\begin{table}[!h]
+\centering
+\caption{\label{tab:model3_pairwise}Model 3: Pairwise Comparisons}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{llllllll}
+\toprule
+Contrast & Context & Level 1 & Level 2 & Estimate & SE & z & p\\
+\midrule
+\textbf{A. GPT-4o-mini} &  &  &  &  &  &  & \\
+Shared vs. Different & Participant POV & Shared: 0.637 & Different: 0.526 & 1.586 & 0.346 & 2.112 & 0.035*\\
+Shared vs. Different & Director POV & Shared: 0.630 & Different: 0.008 & 224.268 & 88.320 & 13.745 & $<$ 0.001***\\
+ &  &  &  &  &  &  & \\
+\textbf{B. GPT-4o} &  &  &  &  &  &  & \\
+Shared vs. Different & Participant POV & Shared: 0.861 & Different: 0.568 & 4.724 & 1.067 & 6.873 & $<$ 0.001***\\
+Shared vs. Different & Director POV & Shared: 0.623 & Different: 0.292 & 4.023 & 0.873 & 6.411 & $<$ 0.001***\\
+ &  &  &  &  &  &  & \\
+\textbf{C. o4-mini} &  &  &  &  &  &  & \\
+Shared vs. Different & Participant POV & Shared: 0.963 & Different: 0.949 & 1.411 & 0.390 & 1.248 & 0.212\\
+Shared vs. Different & Director POV & Shared: 0.939 & Different: 0.191 & 65.301 & 15.693 & 17.389 & $<$ 0.001***\\
+ &  &  &  &  &  &  & \\
+\textbf{D. o3} &  &  &  &  &  &  & \\
+Shared vs. Different & Participant POV & Shared: 0.990 & Different: 0.967 & 3.361 & 1.212 & 3.361 & $<$ 0.001***\\
+Shared vs. Different & Director POV & Shared: 0.967 & Different: 0.971 & 0.890 & 0.268 & -0.388 & 0.698\\
+ &  &  &  &  &  &  & \\
+\bottomrule
+\multicolumn{8}{l}{\textsuperscript{} Level 1 and Level 2 columns show condition labels with probability estimates.}\\
+\multicolumn{8}{l}{\textsuperscript{} Estimate is the difference on the logit (log-odds) scale.}\\
+\multicolumn{8}{l}{\textsuperscript{} P-values adjusted using the Bonferroni method within each family of comparisons.}\\
+\multicolumn{8}{l}{\textsuperscript{} Significance codes: *** p $<$ 0.001, ** p $<$ 0.01, * p $<$ 0.05, . p $<$ 0.1}\\
+\end{tabular}}
+\end{table}

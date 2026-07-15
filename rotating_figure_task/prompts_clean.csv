@@ -1,0 +1,61 @@
+stimulus_set,visual_prompt,spatial_prompt,visual_correct_answer_column,spatial_correct_answer_column,context_prompt
+control_1,"What number or letter can you see in the image?
+
+Respond with a single number or letter:
+
+","Is the number or letter on the left or right side of the image?
+
+Respond with a single word: LEFT or RIGHT
+
+",number_appearance,number_location_x,"There is a person standing in the centre of the image, and a number or letter on the floor nearby.
+"
+control_2,"What colour is the wall directly in front of the person?
+
+Respond with a single word: RED, GREEN, BLUE or BLACK
+
+","Which side of the image is directly in front of the person?
+
+Respond with a single word: LEFT, RIGHT, TOP or BOTTOM
+
+",figure_rotation,figure_rotation,"There is a person standing in the centre of the image. There are coloured walls along the border.
+"
+control_3,"What colour is the wall that the arrow is pointing toward?
+
+Respond with a single word: RED, GREEN, BLUE or BLACK
+
+","Which side of the image is the arrow pointing toward?
+
+Respond with a single word: LEFT, RIGHT, TOP or BOTTOM
+
+",figure_rotation,figure_rotation,"There is an arrow in the centre of the image. There are coloured walls along the border.
+"
+level_1,"Can the person see the number or letter?
+
+Respond with either: CAN SEE or CANNOT SEE
+
+","Is the number or letter in front of or behind the person?
+
+Respond with a single word: FRONT or BEHIND
+
+",relative_location,relative_location,"There is a person standing in the centre of the image, and a number or letter on the floor nearby.
+"
+level_2,"What number or letter can the person see? 
+
+Respond with a single number or letter:
+
+","Is the number or letter on the person's left or right?
+
+Respond with a single word: LEFT or RIGHT
+
+",number_appearance,relative_location,"There is a person standing in the centre of the image, and a number or letter on the floor nearby.
+"
+level_3,"What number or letter can the person see on their {side} side?
+
+Respond with a single number or letter:
+
+","Is the number or letter {symbol} on the persons left or right?
+
+Respond with a single word: LEFT or RIGHT
+
+",number_appearance,relative_location,"There is a person standing in the centre of the image, and 2 numbers or letters on the floor nearby
+"

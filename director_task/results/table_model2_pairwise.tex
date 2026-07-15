@@ -1,0 +1,36 @@
+\begin{table}[!h]
+\centering
+\caption{\label{tab:model2_pairwise}Model 2: Pairwise Comparisons}
+\centering
+\resizebox{\ifdim\width>\linewidth\linewidth\else\width\fi}{!}{
+\begin{tabular}[t]{llllllll}
+\toprule
+Contrast & Context & Level 1 & Level 2 & Estimate & SE & z & p\\
+\midrule
+\textbf{A. GPT-4o-mini} &  &  &  &  &  &  & \\
+Shared vs. Different & None & Shared: 0.739 & Different: 0.135 & 18.178 & 6.020 & 8.757 & $<$ 0.001***\\
+Shared vs. Different & Size & Shared: 0.715 & Different: 0.282 & 6.403 & 2.090 & 5.688 & $<$ 0.001***\\
+Shared vs. Different & Spatial & Shared: 0.630 & Different: 0.198 & 6.889 & 2.248 & 5.915 & $<$ 0.001***\\
+ &  &  &  &  &  &  & \\
+\textbf{B. GPT-4o} &  &  &  &  &  &  & \\
+Shared vs. Different & None & Shared: 0.416 & Different: 0.166 & 3.594 & 1.178 & 3.903 & $<$ 0.001***\\
+Shared vs. Different & Size & Shared: 0.787 & Different: 0.280 & 9.504 & 3.115 & 6.870 & $<$ 0.001***\\
+Shared vs. Different & Spatial & Shared: 0.623 & Different: 0.151 & 9.318 & 3.060 & 6.795 & $<$ 0.001***\\
+ &  &  &  &  &  &  & \\
+\textbf{C. o4-mini} &  &  &  &  &  &  & \\
+Shared vs. Different & None & Shared: 0.895 & Different: 0.600 & 5.713 & 1.885 & 5.281 & $<$ 0.001***\\
+Shared vs. Different & Size & Shared: 0.965 & Different: 0.509 & 26.765 & 9.269 & 9.492 & $<$ 0.001***\\
+Shared vs. Different & Spatial & Shared: 0.939 & Different: 0.389 & 24.228 & 8.172 & 9.451 & $<$ 0.001***\\
+ &  &  &  &  &  &  & \\
+\textbf{D. o3} &  &  &  &  &  &  & \\
+Shared vs. Different & None & Shared: 0.957 & Different: 0.722 & 8.501 & 2.943 & 6.182 & $<$ 0.001***\\
+Shared vs. Different & Size & Shared: 0.990 & Different: 0.535 & 86.428 & 34.709 & 11.104 & $<$ 0.001***\\
+Shared vs. Different & Spatial & Shared: 0.967 & Different: 0.510 & 28.174 & 9.923 & 9.479 & $<$ 0.001***\\
+ &  &  &  &  &  &  & \\
+\bottomrule
+\multicolumn{8}{l}{\textsuperscript{} Level 1 and Level 2 columns show condition labels with probability estimates.}\\
+\multicolumn{8}{l}{\textsuperscript{} Estimate is the difference on the logit (log-odds) scale.}\\
+\multicolumn{8}{l}{\textsuperscript{} P-values adjusted using the Bonferroni method within each family of comparisons.}\\
+\multicolumn{8}{l}{\textsuperscript{} Significance codes: *** p $<$ 0.001, ** p $<$ 0.01, * p $<$ 0.05, . p $<$ 0.1}\\
+\end{tabular}}
+\end{table}
