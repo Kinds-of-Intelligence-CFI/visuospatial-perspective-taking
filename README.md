@@ -119,7 +119,20 @@ python -m director_task.item_editor
 
 ## Citation
 
-If you use this repository in your research, please cite the relevant papers and acknowledge the experimental paradigms implemented here.
+## Citation
+
+If you use this work, please cite:
+
+```bibtex
+@inproceedings{prunty2026visuospatial,
+  title     = {Visuospatial Perspective Taking in Multimodal Language Models},
+  author    = {Prunty, Jonathan and Zhang, Seraphina and Quinn, Patrick and Lian, Jianxun and Xie, Xing and Cheke, Lucy},
+  booktitle = {Proceedings of the Annual Meeting of the Cognitive Science Society},
+  year      = {2026},
+  publisher = {Cognitive Science Society},
+  note      = {To appear}
+}
+```
 
 ## Datasets 
 
