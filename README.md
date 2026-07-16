@@ -119,8 +119,6 @@ python -m director_task.item_editor
 
 ## Citation
 
-## Citation
-
 If you use this work, please cite:
 
 ```bibtex
