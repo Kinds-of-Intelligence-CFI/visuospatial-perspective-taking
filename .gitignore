@@ -1,4 +1,5 @@
-vpt_venv/ 
+vpt_venv/
+/.venv
 "__pycache__/" 
 "*.pyc" 
 /.idea
@@ -35,3 +36,5 @@ human_baseline.py
 CLAUDE.md
 /director_task/images
 /rotating_figure_task/stimuli_parameters.xlsx
+/director_task_manuscript_updates.md
+visuospatialperspective_2598.pdf

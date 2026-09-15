@@ -131,6 +131,32 @@ python -m director_task.run_director_eval_sweep --model <model_name>
 
 Note that it discovers datasets in the `datasets/` directory by name and only matches datasets named `director_task_large_related_prop_<X>_fill_prop_<Y>` (for example `director_task_large_related_prop_0.7_fill_prop_0.9`), so datasets generated with other names (including the commands above) will not be picked up. Run `python -m director_task.run_director_eval_sweep --help` for the full options, including `--dry-run` to preview what would be evaluated.
 
+## Processing results and rebuilding tables
+
+From the repository root, run:
+
+```bash
+python -m unittest director_task.test_clean_results
+python -m director_task.analyse_combined_results
+cd director_task/results
+Rscript director_task.R
+```
+
+The Python script regenerates `director_task_processed.csv` and the plots;
+the R script fits the four models and writes the nine `table_model*.tex` files.
+For a noninteractive Python run, set `MPLBACKEND=Agg`.
+
+Control-task runs are excluded using either `task_name` or the control task's
+inventory-management prompt. This handles historical ASCII exports with missing
+task names: 4,000 such rows previously survived the task-name filter. The corrected
+paper data contain 64,000 observations, with 8,000 per model and format.
+The director task's `sample_type=control` condition is retained.
+
+Identical repeated observations are removed and counts are reported. Repeated
+trial identities (dataset, image, model, and format) with conflicting data stop
+processing for review. R also checks its input before fitting models, so a stale
+processed CSV containing the extra ASCII rows cannot silently regenerate tables.
+
 
 # How samples are generated
 This section describes how each sample in the dataset is generated. It doesn't cover the specific details but should give a good idea of the flow.

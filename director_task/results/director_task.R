@@ -386,6 +386,12 @@ generate_pairwise_table <- function(
 # ==========================
 
 df <- read_csv("director_task_processed.csv")
+
+# Refuse stale/duplicated inputs before fitting models or overwriting tables.
+trial_key <- c("dataset_path", "image_path", "model", "ascii_image")
+stopifnot(!anyDuplicated(df[trial_key]))
+stopifnot(!any(df$task_name == "control_task", na.rm = TRUE))
+stopifnot(!any(grepl("inventory management system", df$block_description, fixed = TRUE)))
 df$format <- factor(df$format, levels = c('ascii','image'))
 df$model <- factor(df$model, levels = c('gpt-4o-mini','gpt-4o','o4-mini','o3'))
 df$visual_perspective <- factor(df$visual_perspective, levels = c('visual-shared','visual-different'))

@@ -5,6 +5,15 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
 import re
+import argparse
+from director_task.clean_results import clean_director_results
+
+parser = argparse.ArgumentParser(description="Process director results and generate plots.")
+parser.add_argument(
+    "--plots-only", action="store_true",
+    help="Regenerate plots from cleaned source data without rewriting the processed CSV.",
+)
+args = parser.parse_args()
 
 path = os.getcwd()
 
@@ -25,7 +34,9 @@ def split_selection_rule(value):
     else:
         return pd.Series([None, None])
 
-df = pd.read_csv(os.path.join(results_dir, "combined_director_task_logs.csv"))
+os.makedirs(plot_dir, exist_ok=True)
+df = pd.read_csv(os.path.join(results_dir, "combined_director_task_logs.csv"), low_memory=False)
+df = clean_director_results(df)
 df['model'] = df['model'].str.split('/').str[-1]
 df['target_value'] = df['target'].str.replace(r'[\[\]"\']', '', regex=True).str.strip()
 df['accuracy'] = (df['model_answer'] == df['target_value']).astype(int)
@@ -43,11 +54,9 @@ df["model"] = pd.Categorical(
     ordered=True
 )
 
-# remove control task
-df = df[df['task_name'] != 'control_task']
-
 # save
-df.to_csv(os.path.join(results_dir, "director_task_processed.csv"), index=False)
+if not args.plots_only:
+    df.to_csv(os.path.join(results_dir, "director_task_processed.csv"), index=False)
 
 
 
