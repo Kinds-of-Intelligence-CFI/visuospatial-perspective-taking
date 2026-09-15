@@ -126,9 +126,10 @@ If you use this work, please cite:
   title     = {Visuospatial Perspective Taking in Multimodal Language Models},
   author    = {Prunty, Jonathan and Zhang, Seraphina and Quinn, Patrick and Lian, Jianxun and Xie, Xing and Cheke, Lucy},
   booktitle = {Proceedings of the Annual Meeting of the Cognitive Science Society},
+  volume    = {48},
   year      = {2026},
   publisher = {Cognitive Science Society},
-  note      = {To appear}
+  url       = {https://escholarship.org/uc/item/2h60n3c7}
 }
 ```
 
